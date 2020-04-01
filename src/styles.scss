@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+main {
+  width: 60%;
+  margin: 2rem auto 0 auto;
+}
+
+
+// Material overrides / additions
+.note-list {
+  .mat-list-item-content {
+    justify-content: space-between;
+  }
+}
+
+mat-form-field{
+  &.full-width {
+    width: 100%;
+  }
+}

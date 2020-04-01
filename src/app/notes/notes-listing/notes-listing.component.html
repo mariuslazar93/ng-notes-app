@@ -1,0 +1,12 @@
+<div class="note-list">
+  <div class="note-list__header">
+    <h1>Your notes</h1>
+    <button mat-mini-fab (click)="openCreateNoteDialog()" color="primary">+</button>
+  </div>
+  <mat-action-list>
+    <button mat-list-item *ngFor="let note of notes" (click)="openEditNoteDialog(note)">
+      {{ note.title }}
+      <button mat-mini-fab (click)="$event.stopPropagation(); deleteNote(note.id)" color="warn">x</button>
+    </button>
+  </mat-action-list>
+</div>
