@@ -26,7 +26,6 @@ export class CreateEditNoteDialogComponent implements OnInit {
   }
 
   onSave() {
-    console.log('save:', this.noteForm.value);
     this.dialogRef.close(this.noteForm.value);
   }
 }

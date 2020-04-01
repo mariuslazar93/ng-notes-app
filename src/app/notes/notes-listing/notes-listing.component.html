@@ -1,12 +1,24 @@
 <div class="note-list">
   <div class="note-list__header">
     <h1>Your notes</h1>
-    <button mat-mini-fab (click)="openCreateNoteDialog()" color="primary">+</button>
+    <button mat-mini-fab (click)="openCreateNoteDialog()" color="primary" [disabled]="loading">
+      <mat-icon aria-hidden="false" aria-label="Add">add</mat-icon>
+    </button>
   </div>
-  <mat-action-list>
+
+  <div *ngIf="loading" class="spinner-wrapper">
+    <mat-spinner [diameter]="30"></mat-spinner>
+  </div>
+
+  <p class="p-x-1" *ngIf="!loading && !notes.length">You don't have any notes saved.</p>
+
+  <mat-action-list *ngIf="!loading">
     <button mat-list-item *ngFor="let note of notes" (click)="openEditNoteDialog(note)">
       {{ note.title }}
-      <button mat-mini-fab (click)="$event.stopPropagation(); deleteNote(note.id)" color="warn">x</button>
+
+      <button mat-mini-fab (click)="$event.stopPropagation(); deleteNote(note.id)" color="warn">
+        <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
+      </button>
     </button>
   </mat-action-list>
 </div>

@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [],
@@ -20,7 +22,9 @@ import { MatCardModule } from '@angular/material/card';
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatIconModule
   ],
   exports: [
     CommonModule,
@@ -31,7 +35,9 @@ import { MatCardModule } from '@angular/material/card';
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatIconModule
   ]
 })
 export class SharedModule {}
