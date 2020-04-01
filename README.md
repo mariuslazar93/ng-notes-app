@@ -1,4 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8a911931-1f7e-4906-8c0c-32832047e760/deploy-status)](https://app.netlify.com/sites/ng-notes-app/deploys)
+
 # NgNotesApp
+
+A simple Notes Management App. Available at https://ng-notes-app.netlify.com/.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
