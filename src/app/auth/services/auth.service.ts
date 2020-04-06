@@ -23,7 +23,7 @@ export class AuthService {
       domain: environment.auth0_domain,
       client_id: environment.auth0_client_id,
       audience: environment.auth0_api_audience,
-      redirect_uri: `${window.location.origin}/notes`,
+      redirect_uri: `${window.location.origin}`,
     })
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
