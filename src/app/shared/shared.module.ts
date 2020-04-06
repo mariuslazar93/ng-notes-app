@@ -10,11 +10,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [],
+  declarations: [NavbarComponent],
   imports: [
     CommonModule,
+    RouterModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatListModule,
@@ -24,10 +28,12 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
   ],
   exports: [
     CommonModule,
+    RouterModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatListModule,
@@ -37,7 +43,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatIconModule
-  ]
+    MatIconModule,
+    MatMenuModule,
+    NavbarComponent,
+  ],
 })
 export class SharedModule {}

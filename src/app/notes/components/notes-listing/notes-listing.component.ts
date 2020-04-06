@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateEditNoteDialogComponent } from '../create-edit-note-dialog/create-edit-note-dialog.component';
 import { filter, mergeMap, tap } from 'rxjs/operators';
-import { Note } from '../note.model';
-import { NotesService } from '../notes.service';
+import { Note } from '../../models/note.model';
+import { NotesService } from '../../services/notes.service';
 
 @Component({
   selector: 'app-notes-listing',
@@ -11,7 +11,7 @@ import { NotesService } from '../notes.service';
   styleUrls: ['./notes-listing.component.scss']
 })
 export class NotesListingComponent implements OnInit {
-  public notes: Note[];
+  public notes: Note[] = [];
   public loading: boolean;
 
   constructor(public dialog: MatDialog, private notesService: NotesService) {}

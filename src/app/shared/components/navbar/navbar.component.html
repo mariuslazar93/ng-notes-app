@@ -1,0 +1,9 @@
+<mat-toolbar class="main-nav">
+  <span>ng-notes-app</span>
+  <div>
+    <a mat-button routerLink="/">Home</a>
+    <a mat-button routerLink="notes">Notes</a>
+    <button mat-flat-button color="primary" (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+    <button mat-button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+  </div>
+</mat-toolbar>

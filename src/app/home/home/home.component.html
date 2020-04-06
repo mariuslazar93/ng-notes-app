@@ -1,0 +1,7 @@
+<div class="hero">
+  <h1 class="mat-h1">NgNotes</h1>
+  <h2 class="mat-h2">A simple tool to manage your notes</h2>
+  <a mat-flat-button color="primary" *ngIf="auth.loggedIn" routerLink="notes">Go to your notes</a>
+  <button mat-flat-button color="primary" *ngIf="!auth.loggedIn" (click)="auth.login()">Log in or Register</button>
+</div>
+
