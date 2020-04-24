@@ -2,7 +2,7 @@
 
 # NgNotesApp
 
-A simple Notes Management App. Available at https://ng-notes-app.netlify.com/.
+A simple Notes Management App. Available at https://ng-notes-app.netlify.app/.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
